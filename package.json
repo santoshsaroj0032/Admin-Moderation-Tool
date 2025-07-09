@@ -1,0 +1,20 @@
+{
+  "name": "car-rental-admin",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^12.x",
+    "react": "^18.x",
+    "react-dom": "^18.x",
+    "tailwindcss": "^3.x"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.x",
+    "postcss": "^8.x"
+  }
+}
