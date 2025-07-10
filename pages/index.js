@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '../context/AuthContext';
 import LoginForm from '../components/Auth/LoginForm';
-
+ 
 export default function Home() {
   const { user, loading, login } = useAuth();
   const [error, setError] = useState('');

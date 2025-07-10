@@ -37,12 +37,12 @@ export default function AuditLog({ auditLog }) {
 }
 
 export const getServerSideProps = requireAuth(async (context) => {
-  // In a real app, you would fetch audit logs from your database
-  const auditLog = [
-    {
+   const auditLog = [
+   
+      {
       action: 'approve',
       listingId: 1,
-      adminEmail: 'admin@example.com',
+      adminEmail: 'santoshsaroj0032@gmail.com',
       timestamp: new Date().toISOString(),
     },
   ];

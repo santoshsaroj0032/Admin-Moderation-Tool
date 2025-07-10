@@ -2,7 +2,8 @@
 import { useEffect } from 'react';
 import Router from 'next/router';
 import { AuthProvider } from '../context/AuthContext';  
-import '../styles/globals.css';  
+ import '../styles/globals.css';
+
  
 function MyApp({ Component, pageProps }) {
   useEffect(() => {

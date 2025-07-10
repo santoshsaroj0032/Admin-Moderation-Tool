@@ -3,7 +3,8 @@ export default function handler(req, res) {
     const { email, password } = req.body;
 
     // Mock authentication
-    if (email === 'admin@example.com' && password === 'admin123') {
+    // if (email === 'admin@example.com' && password === 'admin123') {
+       if (email === 'santoshsaroj0032@gmail.com' && password === 'admin123') {
       res.setHeader('Set-Cookie', `adminUser=${JSON.stringify({ email, role: 'admin' })}; Path=/; HttpOnly`);
       return res.status(200).json({ success: true });
     }
