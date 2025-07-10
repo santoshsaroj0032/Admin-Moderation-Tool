@@ -32,13 +32,13 @@ Password: admin123
 ---
 
 ## 🛠️ Tech Stack
-```
+
 - **Frontend:** Next.js 13, React 18  
 - **Styling:** Tailwind CSS  
 - **State Management:** React Context API  
 - **Routing:** Next.js Router  
 - **Authentication:** Cookie-based sessions  
-```
+
 ---
 
 ## 🚀 Getting Started
@@ -54,8 +54,7 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/yourusername/car-rental-admin.git
-cd car-rental-admin
-```
+ ```
 
 ### Install dependencies:
 ``` 
@@ -74,35 +73,28 @@ yarn dev
 
 ### 🌈 UI Components
 
-Login Form: Clean and modern authentication interface
-
-Listing Table: Sortable, filterable, responsive
-
-Status Badges: Color-coded for quick identification
-
-Action Buttons: Context-aware (Approve/Reject/Edit shown conditionally)
+- Login Form: Clean and modern authentication interface
+- Listing Table: Sortable, filterable, responsive
+- Status Badges: Color-coded for quick identification
+- Action Buttons: Context-aware (Approve/Reject/Edit shown conditionally)
 
 
 
 ### 🔒 Authentication Flow
-User submits credentials via login form
 
-Server validates and sets a secure HttpOnly cookie
-
-Dashboard verifies cookie on each request
-
-Automatic logout after inactivity (Coming Soon)
+- User submits credentials via login form
+- Server validates and sets a secure HttpOnly cookie
+- Dashboard verifies cookie on each request
+- Automatic logout after inactivity (Coming Soon)
 
 ### 🚀 Future Improvements
-Add audit logging (status changes, timestamp, admin name)
 
-Implement CSV export for listings
+- Add audit logging (status changes, timestamp, admin name)
+- Implement CSV export for listings
+- Bulk actions (Approve/Reject multiple listings)
+- Enhanced search and filtering functionality
 
-Bulk actions (Approve/Reject multiple listings)
-
-Enhanced search and filtering functionality
-
-🤝 ## Contributing
+### 🤝 Contributing
 Contributions are welcome!
 Please open an issue first for any major changes or ideas.
 
