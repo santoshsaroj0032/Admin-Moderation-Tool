@@ -95,7 +95,7 @@ yarn dev
 - Enhanced search and filtering functionality
 
 ### 🤝 Contributing
-Contributions are welcome!
-Please open an issue first for any major changes or ideas.
+- Contributions are welcome!
+- Please open an issue first for any major changes or ideas.
 
-Made with ❤️ by Santosh Saroj
+### Made with ❤️ by Santosh Saroj
