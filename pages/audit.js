@@ -1,5 +1,7 @@
 import { useContext } from 'react';
-import { getServerSideProps } from '../utils/auth';
+// import { getServerSideProps } from '../utils/auth';
+import { requireAuth } from '../utils/auth';
+
 import Layout from '../components/Layout';
 
 export default function AuditLog({ auditLog }) {
