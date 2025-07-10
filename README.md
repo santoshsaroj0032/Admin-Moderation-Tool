@@ -33,7 +33,7 @@ Password: admin123
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Next.js 13, React 18  
+- **Frontend:** Next.js 12
 - **Styling:** Tailwind CSS  
 - **State Management:** React Context API  
 - **Routing:** Next.js Router  
@@ -53,7 +53,7 @@ Password: admin123
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/car-rental-admin.git
+git clone https://github.com/santoshsaroj0032/Admin-Moderation-Tool.git
  ```
 
 ### Install dependencies:
