@@ -1,13 +1,22 @@
-import { useContext } from 'react';
-// import { getServerSideProps } from '../utils/auth';
-import { getServerSideProps as withAuth } from '../utils/auth';
-
+import { useAuth } from '../context/AuthContext';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import Layout from '../components/Layout';
 import ListingTable from '../components/Dashboard/ListingTable';
 import StatusFilter from '../components/Dashboard/StatusFilter';
+import withAuth from '../utils/withAuth';
 
 export default function Dashboard({ initialListings }) {
-  const { user } = useContext(AuthContext);
+  const { user, loading } = useAuth();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (!loading && !user) {
+      router.push('/');
+    }
+  }, [user, loading]);
+
+  if (loading || !user) return <p className="text-center mt-10">Loading...</p>;
 
   return (
     <Layout>
@@ -22,36 +31,10 @@ export default function Dashboard({ initialListings }) {
   );
 }
 
-// export const getServerSideProps = async (context) => {
-//   const authProps = await getServerSideProps(context);
-//   if (!authProps.props.user) {
-//     return {
-//       redirect: {
-//         destination: '/',
-//         permanent: false,
-//       },
-//     };
-//   }
-
-//   // Mock data for listings
-//   const initialListings = [
-//     { id: 1, title: 'Toyota Camry', status: 'pending', price: 50, owner: 'user1@example.com' },
-//     { id: 2, title: 'Honda Accord', status: 'approved', price: 45, owner: 'user2@example.com' },
-//     { id: 3, title: 'Ford Mustang', status: 'rejected', price: 70, owner: 'user3@example.com' },
-//   ];
-
-//   return {
-//     props: {
-//       ...authProps.props,
-//       initialListings,
-//     },
-//   };
-// };
-
-export const getServerSideProps = async (context) => {
-  const authProps = await withAuth(context);
-
-  if (!authProps.props.user) {
+ 
+export const getServerSideProps = async (ctx) => {
+  // Check cookies directly
+  if (!ctx.req.cookies.adminUser) {
     return {
       redirect: {
         destination: '/',
@@ -69,8 +52,7 @@ export const getServerSideProps = async (context) => {
 
   return {
     props: {
-      ...authProps.props,
-      initialListings,
+      initialListings,  
     },
   };
 };
